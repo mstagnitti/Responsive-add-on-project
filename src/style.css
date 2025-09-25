@@ -154,6 +154,10 @@ h5 {
   background-color: white;
 }
 
+.card-header.grid {
+  grid-gap: 0;
+}
+
 .card-body {
   padding: 40px 40px 0 40px;
 }
@@ -178,8 +182,9 @@ h5 {
 }
 
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
   border-radius: 10px;
+  aspect-ratio: 1/1;
 }
 
 .grid {
@@ -188,11 +193,16 @@ h5 {
 }
 
 .grid-2-columns {
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
 }
 
 .grid-3-columns-uneven {
   grid-template-columns: 1fr 2fr 2fr;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 @media (max-width: 960px) {
@@ -263,5 +273,13 @@ h5 {
     max-width: 60%;
     display: block;
     margin: 0 auto;
+  }
+
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16/9;
   }
 }
